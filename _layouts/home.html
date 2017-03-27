@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  {% include featured.html %}
+
+
+  {% if site.mailchimp_id %}
+    {% include mailchimp.html %}
+  {% endif%}
+
+
+  {% if site.product_categories %}
+    <ul class="product-categories">
+    <li>
+       <a href="{{site.baseurl}}" class="active">all</a>
+    </li>
+    {% for category in site.categories %}
+      {% assign cat = category | first %}
+      {% unless cat == 'featured' or cat == 'all' %}
+        {% if page.url contains cat %}
+          {% assign class = "active" %}
+        {% else %}
+          {% assign class = "" %}
+        {% endif %}
+        <li>
+          <a href="/{{ category | first }}/" class="{{ class }}">{{ category | first }}</a>
+        </li>
+      {% endunless %}
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+
+  <ul class="product-list">
+    {% for post in site.posts %}
+      {% include product-list.html %}
+    {% endfor %}
+  </ul>
+
+</div>

@@ -1,0 +1,61 @@
+/*** Site header --------------------------------- ***/
+.site-header{
+    z-index: 998;
+
+    width: 100%;
+    height: $header-height;
+
+    border-bottom: 1px solid $grey-color-light;
+    background: white;
+
+    @include padding(16px null null null);
+    @include position(fixed, 0 null null 0);
+    @include transition(top .2s ease-in-out);
+
+    &.nav-up{
+        top: -$header-height;
+    }
+
+    .wrapper{
+        @include padding(null 5px null 5px);
+    }
+}
+
+
+.site-nav {
+  @include display(flex);
+
+
+  a{
+    text-decoration: none;
+  }
+
+  ul{
+    width: 30%;
+
+    @include display(flex);
+    @include margin(null null 0px null);
+  }
+
+  .site-controls{
+    @include display(flex);
+    @include justify-content(flex-end);
+  }
+
+  .site-title{
+    width: 40%;
+
+    text-align: center;
+
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 36px;
+  }
+
+  .nav-link {
+    color: $text-color;
+
+    @include margin( null 7px null 7px);
+  }
+
+}

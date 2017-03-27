@@ -1,0 +1,82 @@
+# Welcome to Hanoi - eCommerce theme for Jekyll!
+#
+# This config file is meant for settings that affect your whole site, values
+# which you are expected to set up once and rarely edit after that.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site URL settings
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://localhost:4000" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+markdown: kramdown
+
+# Gems
+gems:
+  - jekyll-feed
+  - jekyll-livereload
+  - jekyll-minimagick
+  - bourbon
+  - neat
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+# Default product images path
+product_images_path: assets/images/products
+
+# Image resizing for thumbnails
+mini_magick:
+    thumbnail:
+        source: assets/images/products
+        destination: assets/images/products/thumbnails
+        resize: "50x50"
+
+# Snipcart integration testing  IMPORTANT change this to your own TEST key this will be used if runing jekyyl in development mode
+snipcart_test_key: MmUzMmY1N2MtZWQyNC00MjIyLWIxNzMtYTM3ZGUzYjcxNDlhNjM2MTg1MDkwMTc0ODg4OTI1
+# Snipcart integration IMPORTANT change this to your own Snipcart key this will be used if running jekyll in production mode
+snipcart_key: MmUzMmY1N2MtZWQyNC00MjIyLWIxNzMtYTM3ZGUzYjcxNDlhNjM2MTg1MDkwMTc0ODg4OTI1
+# Shopping bag - if false will pop Snipcart every time item added to cart, no cart icon will be visible
+shopping_bag: true
+
+# Site currency
+currency: "$"
+
+# Site Info settings
+title: Hanoi
+description: Hanoi - Static eCommerce theme powered by Jekyll and Snipcart
+year: 2017
+owner: hanoi
+email: contact@hanoitheme.com
+
+# Configure your site navigation for your pages here check http://typicons.com/ for full ist of avalible icons
+navitems:
+    - url: /
+      title: Shop
+      icon: home-outline
+    - url: /about/
+      title: About
+      icon: bookmark
+
+# Categories - set this to false if you do not want to categorise your products no product categories navigation will appear, do not include any categories in the posts in order not to create product categorie pages
+product_categories: true
+
+# Mailchimp mailing list - set to true and specify the required mailchim info for your mailing list below, you need to createate a list first in your Mailchimp account
+mailchimp_id: 31d5998699
+
+# Enable comments via www.disqus.com (You need to create disqus account to set this up)
+disqus_shortname: hanoi-1 # IMPORTANT change this to your own disqus shortname
+
+# Google analytics - simply add your GA ID here to enbale
+google_analytics: 1010101
+
+# Site social media accounts for Find us on:
+facebook_username: hanoi
+twitter_username: hanoi
+googleplus_username: hanoi
+pinterest_username: hanoi
+tumblr_username: hanoi
+instagram_username: hanoi

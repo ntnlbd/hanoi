@@ -1,0 +1,120 @@
+---
+layout: default
+---
+<article class="product" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <div class="product-images-container">
+    <div class="product-active-image-container">
+      {% for image in page.images %}
+        <div id="{{ forloop.rindex }}" class="js-product-active-image-content product-active-image-content">
+          <div class="product-image">
+            <img src="{{ site.baseurl }}/{{site.product_images_path}}/{{page.image-path}}/{{image}}" />
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="product-image-controls">
+      {% for image in page.images %}
+        {% if forloop.first %}
+            {% assign class = "is-active" %}
+        {% else %}
+            {% assign class = "" %}
+        {% endif %}
+        <a href="javascript:void(0)" class="js-product-image-control product-image-control {{class}}" rel="{{forloop.rindex }}" style="background-image: url('{{site.baseurl}}/{{site.product_images_path}}/thumbnails/{{image}}')"></a>
+      {% endfor %}
+    </div>
+  </div>
+
+  <header class="product-header">
+    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+  </header>
+
+  <div class="product-purchase">
+    <button
+      class="button snipcart-add-item"
+      data-item-id="{{page.id}}"
+      data-item-name="{{page.title}}"
+      data-item-price="{{page.price}}"
+      data-item-url="{{site.baseurl}}/{{page.url}}"
+      {% if page.description %}
+      data-item-description="{{ page.description | truncatewords:9 }}"
+      {% endif %}
+      {% if page.cover_image %}
+      data-item-image="{{site.baseurl}}/{{site.product_images_path}}/thumbnails/{{page.cover_image}}"
+      {% endif %}
+      {% if page.weight %}
+      data-item-weight="{{page.weight}}"
+      {% endif %}
+      {% if page.width %}
+      data-item-width="{{page.width}}"
+      {% endif %}
+      {% if page.length %}
+      data-item-length="{{page.length}}"
+      {% endif %}
+      {% if page.height %}
+      data-item-height="{{page.height}}"
+      {% endif %}
+      {% if page.max_quantity %}
+      data-item-max-quantity="{{page.max_quantity}}"
+      {% endif %}
+      {% if page.min_quantity %}
+      data-item-min-quantity="{{page.min_quantity}}"
+      {% endif %}
+      {% if page.stackable %}
+      data-item-stackable="{{page.stackable}}"
+      {% endif %}
+      {% if page.shippable %}
+      data-item-shippable="{{page.shippable}}"
+      {% endif %}
+      {% if page.quantity %}
+      data-item-quantity="{{page.quantity}}"
+      {% endif %}
+      {% if page.taxable %}
+      data-item-taxable="{{page.taxable}}"
+      {% endif %}
+      {% if page.taxes %}
+      data-item-taxes={{page.taxes}}
+      {% endif %}
+      >
+      Bag it
+    </button>
+  </div>
+
+  {% include social-sharing.html %}
+
+  {% if page.description %}
+    <div class="product-description" itemprop="articleBody">
+      {{ page.description }}
+    </div>
+  {% endif %}
+
+  {% if page.features %}
+    <div class="product-features">
+      <h3>Features:</h3>
+      <ul>
+        {% for feature in page.features %}
+        <li>{{ feature }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+
+  {% if page.measurements %}
+  <div class="product-measurments">
+    <ul>
+      {% if page.weight %}
+      <li>
+        weight: {{page.weight}}</span>
+      </li>
+      {% endif %}
+      <li>
+         dimensions: {% if page.width %}{{page.width}}{% endif %} x {% if page.length %}{{page.length}}{% endif %} x {% if page.height %}{{page.height}}{% endif %} cm
+      </li>
+    </ul>
+  </div>
+  {% endif %}
+
+  {% if site.disqus_shortname %}
+    {% include disqus_comments.html %}
+  {% endif %}
+</article>

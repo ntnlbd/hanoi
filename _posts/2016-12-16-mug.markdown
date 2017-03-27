@@ -1,0 +1,27 @@
+---
+layout: post
+id: mug #short single word or number unique identifier
+title:  Mug
+price: "15"
+
+images:
+  - mug.jpg
+  - mug.jpg
+  - mug.jpg
+  - mug.jpg
+  - mug.jpg
+
+cover_image: mug.jpg
+
+categories: advanced
+
+description: Lorem impsum dolore amit mek tapr datanu omo filterrok fdam. Lorem impsum dolore amit mek tapr datanu omo filterrok fdam
+
+features:
+  - Fusce lacinia, lectus vitae scelerisque tristique
+  - Morbi ligula odio, faucibus eu scelerisque eget, viverra a elit. Nullam quis ipsum molestie, dictum arcu id, semper leo
+  - Mauris consectetur massa eu metus molestie maximus. Vivamus ac egestas eros
+  - Vestibulum hendrerit, augue at iaculis rhoncus, erat ligula consequat lorem
+  - Nunc convallis vulputate tortor, non ornare odio blandit non.
+
+---

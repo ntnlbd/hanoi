@@ -1,0 +1,45 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+
+  <!-- Meta information for search engines -->
+  <meta name="author" content="{{ owner.name }}">
+  <meta name="description" content="{% if page.summary %}{{ page.summary | xml_escape }}{% else %}{{ site.description | xml_escape }}{% endif %}">
+  {% if page.categories %}
+      <meta name="keywords" content="best case studies, {{ page.categories | join: ', ' }}, ui case study, ux case study">
+  {% endif %}
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="photo" />
+  {% if site.twitter_username %}
+      <meta name="twitter:creator" content="@{{ site.twitter_username }}" />
+  {% endif %}
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description | strip_html }}{% else %}{{ site.description | strip_html }}{% endif %}" />
+  <meta name="twitter:image" content="{{site.url}}{{site.baseurl}}/{{site.product_images_path}}/{{page.cover_image}}" />
+  <meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
+
+
+  <!-- Open Graph -->
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+  <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html }}{% else %}{{ site.description | strip_html }}{% endif %}" />
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+  <meta property="og:site_name" content="{{ site.title | strip_html | xml_escape }}">
+
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+
+  {% if jekyll.environment == 'production' and site.google_analytics %}
+    {% include google-analytics.html %}
+  {% endif %}
+</head>

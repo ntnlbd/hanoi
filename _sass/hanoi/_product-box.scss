@@ -1,0 +1,41 @@
+.product-box{
+
+  display: block;
+  background: #fff;
+  margin-bottom: $spacing-unit;
+
+  .product-header{
+    height: 34px;
+  }
+
+  .product-info {
+    color: #b3b3b3;
+    box-shadow: 0px 1px 1px #f9f9f9;
+    @include padding(null 18px 10px);
+
+    h4{
+      margin-bottom: 0;
+    }
+  }
+
+  .product-footer{
+    @include display(flex);
+  }
+
+}
+
+.product-image{
+  height: 220px;
+  background-color: white; 
+  text-align: center;
+  width: 100%;
+  @include margin(null null 16px);
+
+
+  img{
+
+    height: 210px;
+    width: auto;
+    @include margin(null auto null);
+  }
+}

@@ -1,0 +1,74 @@
+<li class="product-box">
+    <a href="{{ post.url | relative_url }}">
+      <div class="product-header">
+        <span class="product-price">
+          {{site.currency}} {{post.price}}
+        </span>
+      </div>
+      <div class="product-image">
+        <img src="{{site.baseurl}}/{{site.product_images_path}}/{{ post.cover_image }}" />
+      </div>
+
+      <div class="product-info">
+        <h4>{{ post.title | escape }}</h4>
+        <p>{{ post.description | truncatewords:9 }}</p>
+      </div>
+    </a>
+    <div class="product-footer">
+
+      <button
+        class="button snipcart-add-item"
+        data-item-id="{{post.id}}"
+        data-item-name="{{post.title}}"
+        data-item-price="{{post.price}}"
+        data-item-url="/"
+        {% if post.description %}
+        data-item-description="{{ post.description | truncatewords:9 }}"
+        {% endif %}
+        {% if post.cover_image %}
+        data-item-image="{{site.baseurl}}/{{site.product_images_path}}/thumbnails/{{post.cover_image}}"
+        {% endif %}
+        {% if post.width %}
+        data-item-weight="{{post.weight}}"
+        {% endif %}
+        {% if post.length %}
+        data-item-length="{{post.length}}"
+        {% endif %}
+        {% if post.height %}
+        data-item-height="{{post.height}}"
+        {% endif %}
+        {% if post.max_quantity %}
+        data-item-max-quantity="{{post.max_quantity}}"
+        {% endif %}
+        {% if post.min_quantity %}
+        data-item-min-quantity="{{post.min_quantity}}"
+        {% endif %}
+        {% if post.stackable %}
+        data-item-stackable="{{post.stackable}}"
+        {% endif %}
+        {% if post.shippable %}
+        data-item-shippable="{{post.shippable}}"
+        {% endif %}
+        {% if post.quantity %}
+        data-item-quantity="{{post.quantity}}"
+        {% endif %}
+        {% if post.taxable %}
+        data-item-taxable="{{post.taxable}}"
+        {% endif %}
+        {% if post.taxes %}
+        data-item-taxes="{{post.taxes}}"
+        {% endif %}
+        >
+        Bag it
+      </button>
+
+      {% if site.disqus_shortname %}
+      <a href="">
+        <span class="icon">
+          {% include typicons/messages.svg %}
+        </span>
+        <span class="disqus-comment-count"  data-disqus-identifier="{{ post.url | absolute_url }}"></span>
+      </a>
+      {% endif%}
+    </div>
+</li>

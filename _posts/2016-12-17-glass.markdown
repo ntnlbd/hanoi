@@ -1,0 +1,79 @@
+---
+# SNIPCART PRODUCT OPTIONS =====================================================
+# check http://docs.snipcart.com/configuration/product-definition for more info
+
+# ID --> REQUIRED short single word or number that woud be a unique identifier
+id: glass
+
+# TITLE --> REQUIRED product name as it appears on the home page and product page  
+title:  Glass
+
+# price --> REQUIRED price of the product
+price: "15"
+
+# DESCRIPTION --> NICE TO HAVE short description of the product
+description: Lorem impsum dolore amit mek tapr datanu omo filterrok fdam. Lorem impsum dolore amit mek tapr datanu omo filterrok fdam
+
+# MEASUREMENTS --> Enables product measurements display in features can be left as false for snipcart integration
+measurements: true
+
+# WEIGHT --> CONDITIONALLY REQUIRED in GRAMS Measured weight of the product
+weight: 15g
+
+# WIDTH --> CONDITIONALLY REQUIRED in CENTIMETERS Measured width of the product
+width: 120
+
+# LENGTH --> CONDITIONALLY REQUIRED in CENTIMETERS Measured length of the product
+length: 15
+
+# HEIGHT --> CONDITIONALLY REQUIRED in CENTIMETERS Measured height of the product
+height: 22
+
+# MAX QUANTITY --> OPTIONAL Use this attribute if you want to set a maximum allowed quantity of your product
+max_quantity:
+
+# MIN QUANTITY --> OPTIONAL Use this attribute if you want to set the minimum allowed quantity for your product.
+min_quantity:
+
+# STACKABLE --> OPTIONAL (Default: true) When you set this attribute to false, adding the same product to the cart will result in two distinct items in the cart, instead of simply increasing the quantity.
+stackable:
+
+# SHIPPABLE --> OPTIONAL (Default: true) When you set this attribute to false, the product will be flagged as an item that you do not ship.
+shippable:
+
+# QUANTITY --> OPTIONAL Use this option when you want to set a default quantity for the item that you are about to add.
+quantity:
+
+# TAXABLE --> OPTIONAL (Default: true) Set this option to false when you want to exclude this particular item from the taxes calculation.
+taxable:
+
+# TAXES --> Using this option, you can define which taxes will be applied on this particular item.
+taxes:
+
+# THEME SETTINGS=============================***===================================================
+
+# Layout --> no need to change this one unless you want to write your own template for this product
+layout: post
+
+categories: pro
+
+# IMAGES --> REQUIRED as you are better of to have at least one image present
+images:
+  - glass.jpg
+  - glass.jpg
+  - glass.jpg
+  - glass.jpg
+  - glass.jpg
+
+# COVER IMAGE --> REQUIRED select which image from your images above you would like to use as cover image this image is used as main image for product box on home page and a thumbnail for the Snipcart order
+cover_image: glass.jpg
+
+# FEATURES --> NICE TO HAVE list of product features that is listed below description on product page
+features:
+  - Fusce lacinia, lectus vitae scelerisque tristique
+  - Morbi ligula odio, faucibus eu scelerisque eget, viverra a elit. Nullam quis ipsum molestie, dictum arcu id, semper leo
+  - Mauris consectetur massa eu metus molestie maximus. Vivamus ac egestas eros
+  - Vestibulum hendrerit, augue at iaculis rhoncus, erat ligula consequat lorem
+  - Nunc convallis vulputate tortor, non ornare odio blandit non.
+
+---

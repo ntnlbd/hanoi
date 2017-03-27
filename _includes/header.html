@@ -1,0 +1,56 @@
+<header class="site-header" role="banner">
+
+  <div class="wrapper">
+    <nav class="site-nav">
+
+      <ul class="site-pages">
+        {% for navitem in site.navitems %}
+            {% if navitem.url == page.url %}
+                {% assign class = "active" %}
+            {% else %}
+                {% assign class = "" %}
+            {% endif %}
+            <li class="{{ class }} nav-link">
+              <a href="{{ navitem.url }}" class="link-with-icon">
+                <span class="icon link-icon">
+                  {% include typicons/{{ navitem.icon }}.svg %}
+                </span>
+                <span class="nav-name link-name">
+                  {{ navitem.title }}
+                </span>
+              </a>
+            </li>
+        {% endfor %}
+      </ul>
+
+      <a class="site-title" href="{{ "/" | relative_url}}">Hanoi</a>
+
+      <ul class="site-controls">
+
+        <li class="site-search nav-link">
+          <a href="" id="open-search" class="link-with-icon">
+            <span class="icon link-icon">{% include typicons/zoom.svg %}</span>
+            <span class="nav-name link-name">
+              Search
+            </span>
+          </a>
+        </li>
+        {% if site.shopping_bag %}
+        <li class="site-basket nav-link last">
+          <a href="#" class="snipcart-checkout link-with-icon" >
+            <span class="icon link-icon">{% include typicons/shopping-bag.svg %}</span>
+            <div class="snipcart-summary">
+              <span class="snipcart-total-items"></span>
+            </div>
+            <span class="nav-name link-name">
+              Check Out
+            </span>
+          </a>
+        </li>
+        {% endif %}
+      </ul>
+
+    </nav>
+  </div>
+
+</header>

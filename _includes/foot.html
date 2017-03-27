@@ -1,0 +1,35 @@
+<!-- JQUERY -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+
+<!--SNIPCART Integration -->
+<script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="{% if jekyll.environment == 'production' %}{{site.snipcart_key}}{% else %}{{site.snipcart_test_key}}{% endif %}" {% if site.shopping_bag %} data-autopop="false" {% endif %}></script>
+<link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
+
+
+<!-- SEARCH -->
+<script src="{{site.baseurl}}/assets/javascripts/jekyll-search.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '{{site.baseurl}}/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}"><img src="{{site.baseurl}}/{{site.product_images_path}}/thumbnails/{image}"/><span>{title}</span><span>{description}</span><span>{{site.currency}}{price}</span></a></li>',
+    noResultsText: '<p class="search-not-found">Sorry! Nothing found =(</p>',
+    limit: 50,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+</script>
+
+{% if site.comments %}
+<!-- DISQUS Comment Counter-->
+<script id="dsq-count-scr" src="//hanoi-1.disqus.com/count.js" async></script>
+{% endif %}
+
+<!-- THEME SCRIPTS -->
+<script src="{{site.baseurl}}/assets/javascripts/hanoi.js"> </script>
+
+{% if jekyll.environment == 'production' and site.google_analytics %}
+  {% include google-analytics.html %}
+{% endif %}

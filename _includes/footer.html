@@ -1,0 +1,67 @@
+<footer class="site-footer">
+
+  <div class="wrapper">
+
+    <p class="footer-heading">{{ site.title | escape }} &copy; {{ site.year | escape}}</p>
+
+    <ul class="social-media-list">
+
+      {% if site.facebook_username %}
+      <li>
+        <a href="" class="link-with-icon">
+          <span class="icon link-icon">{% include typicons/social-facebook-circular.svg%}<span/>
+          <span class="link-name">Facebook<span/>
+        </a>
+      </li>
+      {% endif %}
+
+      {% if site.twitter_username %}
+      <li>
+        <a href="" class="link-with-icon">
+          <span class="icon link-icon">{% include typicons/social-twitter-circular.svg %}<span/>
+          <span class="link-name">Twitter<span/>
+        </a>
+      </li>
+      {% endif %}
+
+      {% if site.googleplus_username %}
+      <li>
+        <a href="" class="link-with-icon">
+          <span class="icon link-icon">{% include typicons/social-google-plus-circular.svg%}<span/>
+          <span class="link-name">Google +<span/>
+        </a>
+      </li>
+      {% endif %}
+
+      {% if site.pinterest_username %}
+      <li>
+        <a href="" class="link-with-icon">
+          <span class="icon link-icon">{% include typicons/social-pinterest-circular.svg%}<span/>
+          <span class="link-name">Pinterest<span/>
+        </a>
+      </li>
+      {% endif %}
+
+      {% if site.tumblr_username %}
+      <li>
+        <a href="" class="link-with-icon">
+          <span class="icon link-icon">{% include typicons/social-tumbler-circular.svg%}<span/>
+          <span class="link-name">Tumblr<span/>
+        </a>
+      </li>
+      {% endif %}
+
+      {% if site.instagram_username %}
+      <li>
+        <a href="" class="link-with-icon">
+          <span class="icon link-icon">{% include typicons/social-instagram-circular.svg%}<span/>
+          <span class="link-name">Instagram<span/>
+        </a>
+      </li>
+      {% endif %}
+
+    </ul>
+
+  </div>
+
+</footer>
