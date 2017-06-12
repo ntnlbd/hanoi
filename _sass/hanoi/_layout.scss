@@ -15,8 +15,8 @@
 /*** Product list ---------------------------- ***/
 
 .product-list{
-  @include display(flex);
-  @include flex-flow(column);
+  display: flex;
+  flex-flow: column;
 }
 
 

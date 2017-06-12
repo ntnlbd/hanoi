@@ -11,13 +11,12 @@ ruby RUBY_VERSION
 # Happy Jekylling!
 gem "jekyll", "3.3.1"
 
-# Bourboun/Neat SASS framework - Documentation at www.bourbon.io
 gem "bourbon"
-gem "neat"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"
-   gem "jekyll-livereload"
    gem "jekyll-minimagick"
+   gem "jekyll-autoprefixer"
+   gem "jekyll-livereload"
 end
