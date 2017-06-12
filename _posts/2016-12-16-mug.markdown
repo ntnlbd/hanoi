@@ -5,11 +5,11 @@ title:  Mug
 price: "15"
 
 images:
-  - mug.jpg
-  - mug.jpg
-  - mug.jpg
-  - mug.jpg
-  - mug.jpg
+  - mug-1.jpg
+  - mug-2.jpg
+  - mug-3.jpg
+  - mug-4.jpg
+  - mug-5.jpg
 
 cover_image: mug.jpg
 

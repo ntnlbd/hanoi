@@ -5,11 +5,11 @@ title:  Vase
 price: "15"
 
 images:
-  - vase.jpg
-  - vase.jpg
-  - vase.jpg
-  - vase.jpg
-  - vase.jpg
+  - vase-1.jpg
+  - vase-2.jpg
+  - vase-3.jpg
+  - vase-4.jpg
+  - vase-5.jpg
 cover_image: vase.jpg
 
 categories: basic featured
