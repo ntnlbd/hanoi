@@ -19,14 +19,14 @@
   }
 
   .product-footer{
-    @include display(flex);
+    display: flex;
   }
 
 }
 
 .product-image{
   height: 220px;
-  background-color: white; 
+  background-color: white;
   text-align: center;
   width: 100%;
   @include margin(null null 16px);

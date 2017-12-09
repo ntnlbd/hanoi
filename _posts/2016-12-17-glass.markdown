@@ -59,11 +59,11 @@ categories: pro
 
 # IMAGES --> REQUIRED as you are better of to have at least one image present
 images:
-  - glass.jpg
-  - glass.jpg
-  - glass.jpg
-  - glass.jpg
-  - glass.jpg
+  - glass-1.jpg
+  - glass-2.jpg
+  - glass-3.jpg
+  - glass-4.jpg
+  - glass-5.jpg
 
 # COVER IMAGE --> REQUIRED select which image from your images above you would like to use as cover image this image is used as main image for product box on home page and a thumbnail for the Snipcart order
 cover_image: glass.jpg

@@ -5,11 +5,11 @@ title:  Speaker
 price: "15"
 
 images:
-  - speaker.jpg
-  - speaker.jpg
-  - speaker.jpg
-  - speaker.jpg
-  - speaker.jpg
+  - speaker-1.jpg
+  - speaker-2.jpg
+  - speaker-3.jpg
+  - speaker-4.jpg
+  - speaker-5.jpg
 cover_image: speaker.jpg
 
 categories: pro

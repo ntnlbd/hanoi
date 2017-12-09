@@ -16,10 +16,10 @@ markdown: kramdown
 # Gems
 gems:
   - jekyll-feed
-  - jekyll-livereload
   - jekyll-minimagick
+  - jekyll-autoprefixer
+  - jekyll-livereload
   - bourbon
-  - neat
 
 exclude:
   - Gemfile

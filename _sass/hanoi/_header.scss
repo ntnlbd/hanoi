@@ -7,10 +7,11 @@
 
     border-bottom: 1px solid $grey-color-light;
     background: white;
+    transition: top .2s ease-in-out;
 
     @include padding(16px null null null);
     @include position(fixed, 0 null null 0);
-    @include transition(top .2s ease-in-out);
+
 
     &.nav-up{
         top: -$header-height;
@@ -23,7 +24,7 @@
 
 
 .site-nav {
-  @include display(flex);
+  display: flex;
 
 
   a{
@@ -33,13 +34,13 @@
   ul{
     width: 30%;
 
-    @include display(flex);
+    display: flex;
     @include margin(null null 0px null);
   }
 
   .site-controls{
-    @include display(flex);
-    @include justify-content(flex-end);
+    display: flex;
+    justify-content: flex-end;
   }
 
   .site-title{
